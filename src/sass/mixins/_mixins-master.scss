@@ -1,0 +1,64 @@
+// Font Size
+@mixin font-size($pixel: 14, $context: 14 ) {
+  font-size: #{$pixel}px;
+  font-size: #{$pixel/$context}em;
+}
+
+// Letter Spacing
+@mixin letter-spacing($value: 1) {
+  letter-spacing: ($value / 1000 ) * 1em;
+}
+
+// Line Height
+@mixin line-height($pixel: 14, $context: 14 ) {
+  line-height: #{$pixel}px;
+  line-height: #{$pixel/$context}em;
+}
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Clearfix AB
+@mixin clearfixab() {
+  &:before,
+  &:after {
+	content: "";
+	display: table;
+  }
+  &:after {
+	clear: both;
+  }
+}
+
+// Clearfix
+@mixin clearfix() {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+  clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+  width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// Clearfix for with before & after
+@mixin clearfixba() {
+  &:before,
+  &:after {
+	content: "";
+	display: table;
+  }
+  &:after {
+	clear: both;
+  }
+}

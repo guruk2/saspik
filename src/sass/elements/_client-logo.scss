@@ -1,0 +1,17 @@
+.logo-carousel {
+	.swiper-wrapper {
+		align-items: center;
+	}
+
+	.brand-logo {
+		display: block;
+		text-align: center;
+		opacity: 0.5;
+
+		&:hover {
+			opacity: 1;
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+.listitems {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: flex;
+		line-height: 26px;
+		align-items: baseline;
+		margin-bottom: 10px;
+
+		i {
+			color: $color__theme;
+			display: inline-block;
+		}
+
+		p {
+			margin: 0;
+			margin-left: 15px;
+			display: inline-block;
+		}
+	}
+}

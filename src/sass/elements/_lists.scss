@@ -1,0 +1,120 @@
+ul, ol {	
+	padding-left: 30px;
+}
+
+
+.dl-horizontal dd:before, .dl-horizontal dd:after {
+	content: " ";
+	display: table; 
+}
+.dl-horizontal dd:after {
+	clear: both; 
+}
+
+
+.list-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        font-size: 16px;
+        line-height: 36px;
+        font-weight: 500;
+        color: $color__heading;
+        padding-left: 36px;
+        position: relative;
+
+        &:before {
+            content: "\4e";
+            font-family: eleganticons;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $color__theme;
+        }
+    }
+
+    &.color-two {
+        li {
+            &:before {
+                color: $color__theme-2;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+	.dl-horizontal dt {
+		float: left;
+		width: 160px;
+		clear: left;
+		text-align: right;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap; 
+	}
+	.dl-horizontal dd {
+		margin-left: 180px; 
+	} 
+}
+
+
+ol {
+	list-style: decimal;
+	ul {
+
+		li {
+			// padding-left: 20px;
+
+			&:before {
+				display: block;
+			}
+		}
+
+		ol {		
+			> li {
+				padding-left: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+ul {
+	ol {
+		> li {
+			padding-left: 0 !important;
+
+			&:before {
+				display: none;
+			}
+
+			ul {
+				li {
+					&:before {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+
+	
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

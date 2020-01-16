@@ -1,0 +1,133 @@
+.download {
+    padding: 120px 0;
+}
+
+
+.download-wrapper {
+    padding-top: 115px;
+    
+
+    .title {
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+}
+
+.download-feature-image {
+    position: relative;
+    max-width: 500px;
+    height: 560px;
+
+    .image-one {
+        z-index: 22;
+        position: absolute;
+        left: 30px;
+    }
+
+    .image-two {
+        position: absolute;
+        right: 10px;
+        top: -20px;
+    }
+
+    svg {
+        position: absolute;
+        z-index: -1;
+        top: 43px;
+        right: 0;
+    }
+}
+
+.app-btn-wrapper {
+    .app-btn {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .download-feature-image .image-one {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .download-feature-image {
+        svg {
+            right: auto;
+            left: 0;
+        }
+
+        .image-one {
+            margin-left: 0;
+        }
+
+        .image-two {
+            right: 25%;
+        }
+    }
+
+    .download {
+        padding: 100px 0;
+    }
+
+    .signup-section {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .download-feature-image {
+        .image-two {
+            left: 150px;
+            right: auto;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .download-feature-image {
+        height: 450px;
+        svg {
+            top: -50px;
+            max-width: 100%;
+        }
+
+        .image-one {
+            margin-left: 0;
+            max-width: 200px;
+        }
+
+        .image-two {
+            right: auto;
+            top: -18px;
+            max-width: 270px;
+            left: 25%;
+        }
+    }
+
+    .download-wrapper {
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .download-feature-image {
+        .image-two {
+            right: auto;         
+            left: 15%;
+        }
+    }
+
+    .app-btn-wrapper .app-btn:not(:last-child) {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}

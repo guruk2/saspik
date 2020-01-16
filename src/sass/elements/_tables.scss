@@ -1,0 +1,85 @@
+table {
+	width: 100%;
+	margin-bottom: 20px;
+
+	thead {
+		tr {
+			th {
+				border-right: 1px solid #dad3c5;
+			}
+		}
+	}
+
+	th {
+		border: 1px solid #dad3c5;	
+		text-align: left;
+		padding: 10px 15px;
+		color: #464b50;
+		vertical-align: top;
+		font-size: 16px;
+		font-weight: 600;
+		min-width: 130px;
+		vertical-align: middle;
+
+		a {
+			color: $color__heading;
+
+			&:hover {
+				color: $color__theme;
+			}
+		}
+	}
+
+	td {
+		padding: 10px 15px;
+		border: 1px solid #dad3c5;
+		border-top: none;
+		border-right: none;
+		vertical-align: middle;
+
+		&:last-child {
+			border-right: 1px solid #dad3c5;
+		}
+	}
+}
+
+tbody {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	direction: ltr;
+
+	> tr {
+		border-top: 1px solid #dad3c5;
+	}
+}
+
+tfoot {
+	tr {
+		#prev, #next {
+			a:hover {
+				color: $color__theme;
+			}
+		}
+	}
+}
+
+
+caption {
+	caption-side: top;
+	text-align: center;	
+}
+
+#calendar_wrap, .calendar_wrap {
+	caption {
+		text-align: left;
+	}
+}
+@media (max-width: 576px) {
+	table th {
+		min-width: 80px;
+	}
+}
